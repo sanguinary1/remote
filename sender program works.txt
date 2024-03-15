@@ -1,0 +1,6 @@
+1. Data to transmit is passed to the command-line: AudioTransmit_Send.exe "A test string"
+2. The program creates a blank temporary .wav file.
+3. A sine-wave is generated in a specific frequency to indicate the start of a new data transmission. This tone is appended to the wave file.
+4. Each data byte is converted into bits - an "on" or "off" tone is generated for each bit. A separate confirmation tone is sent after each bit value.
+5. A final tone is appended to indicate the end of the transmission.
+6. The temporary wave file is played through the computer speakers and then deleted.

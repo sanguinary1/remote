@@ -84,7 +84,7 @@ DWORD ProcessSamples()
 		// check of all samples have been processed
 		if(dwSamplesRemaining == 0)
 		{
-			// finished
+        // finished
 			break;
 		}
 

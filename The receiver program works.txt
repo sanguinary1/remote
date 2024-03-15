@@ -1,0 +1,8 @@
+1. Start listening for data: AudioTransmit_Listen.exe
+2. The program will access the microphone using the waveInOpen API.
+3. The program will continuously record 1 second audio samples (16-bit mono at 8,000Hz sample rate).
+4. Each sample will be analysed for "message tones" from our sender program. This works using the Goertzel algorithm to detect specific frequencies within the audio samples. The CalculateToneMagnitude function detects the "strength" of the target frequency within the current audio sample.
+5. When a signal frequency is detected (above the minimum threshold value: TONE_THRESHOLD), the specified signal will be processed. The threshold value can be modified to allow for different levels of volume and background noise. Data transmission will begin when the "transmission start" tone is detected.
+6. When each set of 8 bits have been received, they will be converted back into a byte and printed to the console.
+7. The program will continue to read data bits until the "transmission end" tone is detected.
+8. The receiver will now wait for the next message.
